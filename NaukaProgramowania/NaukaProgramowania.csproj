@@ -43,9 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kasjer.cs" />
+    <Compile Include="Kierownik.cs" />
+    <Compile Include="Magazynier.cs" />
+    <Compile Include="Pojazdy\Motor.cs" />
+    <Compile Include="Pojazdy\Pojazd.cs" />
+    <Compile Include="Pracownik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Samochod.cs" />
+    <Compile Include="Pojazdy\Rower.cs" />
+    <Compile Include="Pojazdy\Samochod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

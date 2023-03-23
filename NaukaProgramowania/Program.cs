@@ -1,8 +1,6 @@
-﻿using System;
-using System.CodeDom;
+﻿using NaukaProgramowania.Pojazdy;
+using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace NaukaProgramowania
 {
@@ -10,18 +8,35 @@ namespace NaukaProgramowania
     {
         static void Main(string[] args)
         {
-            Samochod samochod = new Samochod(2000, 4, "Seat", "Czerwony");
-            samochod.WyswietlSzczegoly();
-            samochod.PrzemalujSamochod("Czarny");
-            samochod.WyswietlSzczegoly();
-            while (true)
+            //var magazynier = new Magazynier(2500.0m, "Jan Kowalski", "CHŁOP");
+            //var kasjer = new Kasjer(2400.0m, "Janina Nowak", "CHŁOKPKA");
+            //var kierownik = new Kierownik(2600.0m, "Michał Wiśniewski", "CHŁOP");
+            //var pracownicy = new List<Pracownik>();
+            
+            //pracownicy.Add(kierownik);
+            //pracownicy.Add(kasjer);
+            //pracownicy.Add(magazynier);
+
+            //foreach (var pracownik in pracownicy)
+            //{
+            //    pracownik.Pracuj();
+            //    pracownik.PowiedzCoRobisz();
+            //}
+
+            Pojazd samochod = new Samochod();
+            Pojazd motor = new Motor();
+            Pojazd rower = new Rower();
+            var listaPojazdow = new List<Pojazd>();
+            listaPojazdow.Add(samochod);
+            listaPojazdow.Add(motor);
+            listaPojazdow.Add(rower);
+
+            foreach (var pojazd in listaPojazdow)
             {
-                var wcisnietyPrzycisk = Console.ReadKey();
-                if (wcisnietyPrzycisk.Key == ConsoleKey.Enter)
-                    samochod.OdpalSilnik();
-                else if(wcisnietyPrzycisk.Key == ConsoleKey.Escape)
-                    samochod.ZgasSilnik();
+                pojazd.Jedz();
             }
+
+            Console.ReadLine();
         }
     }
 }
