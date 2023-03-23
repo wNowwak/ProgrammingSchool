@@ -8,20 +8,20 @@ namespace NaukaProgramowania
     {
         static void Main(string[] args)
         {
-            //var magazynier = new Magazynier(2500.0m, "Jan Kowalski", "CHŁOP");
-            //var kasjer = new Kasjer(2400.0m, "Janina Nowak", "CHŁOKPKA");
-            //var kierownik = new Kierownik(2600.0m, "Michał Wiśniewski", "CHŁOP");
-            //var pracownicy = new List<Pracownik>();
-            
-            //pracownicy.Add(kierownik);
-            //pracownicy.Add(kasjer);
-            //pracownicy.Add(magazynier);
+            var magazynier = new Magazynier(2500.0m, "Jan Kowalski", "CHŁOP");
+            var kasjer = new Kasjer(2400.0m, "Janina Nowak", "CHŁOKPKA");
+            var kierownik = new Kierownik(2600.0m, "Michał Wiśniewski", "CHŁOP");
+            var pracownicy = new List<Pracownik>();
 
-            //foreach (var pracownik in pracownicy)
-            //{
-            //    pracownik.Pracuj();
-            //    pracownik.PowiedzCoRobisz();
-            //}
+            pracownicy.Add(kierownik);
+            pracownicy.Add(kasjer);
+            pracownicy.Add(magazynier);
+
+            foreach (var pracownik in pracownicy)
+            {
+                pracownik.Pracuj();
+                pracownik.PowiedzCoRobisz();
+            }
 
             Pojazd samochod = new Samochod();
             Pojazd motor = new Motor();
