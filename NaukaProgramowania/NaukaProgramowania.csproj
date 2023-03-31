@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KalkulatorTemperatury\KelvinToCelsiusCalculator.cs" />
     <Compile Include="Kasjer.cs" />
     <Compile Include="Kierownik.cs" />
     <Compile Include="Magazynier.cs" />

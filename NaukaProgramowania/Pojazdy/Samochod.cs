@@ -17,6 +17,12 @@ namespace NaukaProgramowania
         private void OdpalSilnik()
         {
             Console.WriteLine("Silnik odpalony");
+            SkrecWLewoOXStopni(12.0m);
+        }
+
+        private void SkrecWLewoOXStopni(decimal x)
+        {
+            Console.WriteLine($"Skręcam w lewo o {x} stopni");
         }
     }
 }
