@@ -1,5 +1,6 @@
 ﻿using NaukaProgramowania.KalkulatorTemperatury;
 using NaukaProgramowania.Pojazdy;
+using Ninject;
 using System;
 using System.Collections.Generic;
 
@@ -9,15 +10,16 @@ namespace NaukaProgramowania
     {
         static void Main(string[] args)
         {
+            using (var kernel = new StandardKernel(new NaukaProgramowaniaDependencyInjection()))
+            {
+                var kalkulator = kernel.Get<IKalkulator>();
 
-            var calculator = new KelvinToCelsiusCalculator();
-            var tempWKelvinach = 273.0m;
-            string bledy = "";
-            var tempWCelsiuszach = calculator.PrzeliczNaCeliusze(tempWKelvinach, ref bledy);
-            tempWCelsiuszach = calculator.PrzeliczNaCeliusze(tempWKelvinach, ref bledy);
-            tempWCelsiuszach = calculator.PrzeliczNaCeliusze(tempWKelvinach, ref bledy);
-            tempWCelsiuszach = calculator.PrzeliczNaCeliusze(tempWKelvinach, ref bledy);
+                var wynikMnozenia = kalkulator.Pomnoz(2, 5);
+                var wynikPotegowania = kalkulator.ObliczPotege(2, 5);
+            }
+
             
+
 
             //var magazynier = new Magazynier(2500.0m, "Jan Kowalski", "CHŁOP");
             //var kasjer = new Kasjer(2400.0m, "Janina Nowak", "CHŁOKPKA");
