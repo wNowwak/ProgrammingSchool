@@ -2,6 +2,7 @@
 using Common.Formatters;
 using Common.Interfaces;
 using Common.Loggers;
+using Modele;
 using System;
 
 namespace NaukaProgramowania
@@ -13,9 +14,19 @@ namespace NaukaProgramowania
             IOutputFormatter outputFormatter = new OutputFormatter();
             IUserLogger userLogger = new ConsoleLogger(outputFormatter);
 
-            userLogger.Log("Test 123", LogType.Info);
-            userLogger.Log("Test 123", LogType.Warning);
-            userLogger.Log("Test 123", LogType.Error);
+            var czlowiek = new Czlowiek
+            {
+                Imie = "Marcin",
+                Nazwisko = "Hasiak",
+                Wiek = 26,
+                CzyChlop = true
+            };
+
+            czlowiek.PrzedstawSie();
+            czlowiek.ZmienPlec();
+            czlowiek.PrzedstawSie();
+
+
 
             Console.ReadLine();
         }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Modele">
+      <HintPath>..\..\Modele\Modele\bin\Debug\netstandard2.0\Modele.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject, Version=3.3.6.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.6\lib\net45\Ninject.dll</HintPath>
     </Reference>
@@ -46,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CzlowiekExtensionsMethod.cs" />
     <Compile Include="IKalkulator.cs" />
     <Compile Include="IKalkulatorPoteg.cs" />
+    <Compile Include="Kalkulator.cs" />
     <Compile Include="KalkulatorTemperatury\KalkulatoMnozenia.cs" />
     <Compile Include="KalkulatorTemperatury\KalkulatorOgolny.cs" />
     <Compile Include="KalkulatorTemperatury\KalkulatorPetegFor.cs" />
@@ -58,6 +63,7 @@
     <Compile Include="Kierownik.cs" />
     <Compile Include="Magazynier.cs" />
     <Compile Include="NaukaProgramowaniaDependencyInjection.cs" />
+    <Compile Include="Parsery.cs" />
     <Compile Include="Pojazdy\IKalkulatorMnozenia.cs" />
     <Compile Include="Pojazdy\Motor.cs" />
     <Compile Include="Pojazdy\Pojazd.cs" />
