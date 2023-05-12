@@ -36,6 +36,9 @@
     <Reference Include="Modele">
       <HintPath>..\..\Modele\Modele\bin\Debug\netstandard2.0\Modele.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject, Version=3.3.6.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.6\lib\net45\Ninject.dll</HintPath>
     </Reference>
@@ -62,6 +65,7 @@
     <Compile Include="Kasjer.cs" />
     <Compile Include="Kierownik.cs" />
     <Compile Include="Magazynier.cs" />
+    <Compile Include="Models\GoldDto.cs" />
     <Compile Include="NaukaProgramowaniaDependencyInjection.cs" />
     <Compile Include="Parsery.cs" />
     <Compile Include="Pojazdy\IKalkulatorMnozenia.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pojazdy\Rower.cs" />
     <Compile Include="Pojazdy\Samochod.cs" />
+    <Compile Include="WebClients\Interfaces\ICurrencyWebClient.cs" />
+    <Compile Include="WebClients\NbpWebClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
