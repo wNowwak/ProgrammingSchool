@@ -1,8 +1,6 @@
-﻿using Common.Enums;
-using Common.Formatters;
+﻿using Common.Formatters;
 using Common.Interfaces;
 using Common.Loggers;
-using Modele;
 using NaukaProgramowania.WebClients;
 using NaukaProgramowania.WebClients.Interfaces;
 using System;
