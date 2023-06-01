@@ -21,4 +21,16 @@ internal class NBPCurrencyWebClient : ICurrencyWebClient
 
         return result!;
     }
+
+    public CurrencyDto GetCurrencyRateInSpecificDate(string code, DateTime date)
+    {
+        //http://api.nbp.pl/api/exchangerates/rates/{table}/code}/{date}/
+        throw new NotImplementedException();
+    }
+
+    public CurrencyDto GetLastCurrencyRateByCode(string code, int count)
+    {
+        // http://api.nbp.pl/api/exchangerates/rates/{table}/{code}/last/{topCount}/
+        throw new NotImplementedException();
+    }
 }
