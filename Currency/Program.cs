@@ -14,6 +14,6 @@ internal class Program
         var provider = services.BuildServiceProvider();
         var processor = provider.GetService<MainProcessor>();
 
-        processor!.Process();
+       processor!.Process();
     }
 }
